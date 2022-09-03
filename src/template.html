@@ -3,13 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title><=% HtmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
   </head>
   <body>
-    <div id="content" class="content"></div>
+    <div id="containers" class="containers">
+      <div class="header">
+        <h1>Todo List</h1>
+      </div>
+      <div class="menu">
+        <div class="menue-date">
+          <h1>1/sept/2022</h1>
+        </div>
+        <div class="navbar">
+          <ul>
+            <li><img src="" alt="ToDay" class="sun" /> Todat</li>
+            <li><img src="" alt="important" class="star" /> important</li>
+            <li><img src="" alt="tasks" class="home" />Tasks</li>
+            <li><img src="" alt="about" class="show" />About</li>
+          </ul>
+        </div>
+        <div class="lists">
+          <div class="list">
+            <h2>titleof list</h2>
+            <button class="delete-list">
+              <img src="" alt="delet list" class="close" />
+            </button>
+          </div>
+          <div class="new-list">
+            <h2>+ New List</h2>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="page-title">
+          <h2 id="page-title">My Day</h2>
+        </div>
+        <div class="tasks" id="tasks">
+          <div class="task">
+            <h2>task title</h2>
+            <div>
+              <button><img src="" alt="close" class="trash" /></button>
+              <button><img src="" alt="" class="show" /></button>
+            </div>
+          </div>
+        </div>
+        <div class="add-task">
+          <input
+            type="text"
+            name="task"
+            id="input-task"
+            placeholder="+ Add Tasks"
+          />
+          <button>Add</button>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="detail-header">
+          <h2>task title</h2>
+          <div class="detail-btn">
+            <button id="close">
+              <img src="" alt="close" class="close" />
+            </button>
+            <button id="delete">
+              <img src="" alt="close" class="trash" />
+            </button>
+            <button><img src="" alt="" class="done" /></button>
+          </div>
+        </div>
+        <div class="detail-date">
+          <h2>sat,september 3</h2>
+        </div>
+        <div class="textarea">
+          <textarea
+            name="note"
+            id="note"
+            cols="70"
+            rows="20"
+            placeholder="Add Note
+          "
+          ></textarea>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
