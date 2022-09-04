@@ -1,2 +1,4 @@
 import './styles/main.css';
-import './seticon.js';
+import { taskspage } from './pages/tasks';
+
+taskspage();
