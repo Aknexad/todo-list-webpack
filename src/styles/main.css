@@ -131,9 +131,29 @@ li:hover {
   width: 350px;
   position: absolute;
   top: 88%;
+  overflow: hidden;
+}
+.new-list input {
+  width: 90%;
+  height: 30px;
+  background-color: transparent;
+  color: var(--font-color);
+  padding: 5px 10px;
 }
 
-.new-list:hover {
+.new-list button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: var(--color-one);
+  color: var(--font-color);
+  border: none;
+}
+
+.new-list button:hover {
+  color: darkgreen;
+}
+
+.new-list input:hover {
   background-color: var(--hover-color);
 }
 
@@ -178,6 +198,7 @@ li:hover {
   align-items: flex-start;
   gap: 10px;
   width: 100%;
+  overflow: hidden;
 }
 
 .task {
