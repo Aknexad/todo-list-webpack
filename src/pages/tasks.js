@@ -1,31 +1,36 @@
 import task from '../component/task';
+import { taskData } from '../data';
+import setLogo from '../setIcons';
+import domManip from '../domManipulation';
 
-const arrOfTasks = [
-  {
-    title: 'testing Task',
-    date: '9/4/2022',
-    detail: 'this is a testing text ',
-  },
-];
 function taskspage() {
-  for (let i = 0; i < arrOfTasks.length; i++) {
-    const element = arrOfTasks[i];
-    document.querySelector('#tasks').appendChild(task(arrOfTasks[i].title));
-  }
-
+  renderTasks();
   document.querySelector('#add-task').addEventListener('click', () => {
     let input = document.querySelector('#input-task');
-    arrOfTasks.push(createTask(input.value));
+    taskData.push(createTask(input.value));
     input.value = '';
+    deleteTask();
+    renderTasks();
   });
-
-  function createTask(title) {
-    return {
-      title: title,
-      date: Date.now(),
-      detail: '',
-    };
-  }
 }
 
-export { taskspage, arrOfTasks };
+function renderTasks() {
+  for (let i = 0; i < taskData.length; i++) {
+    document.querySelector('#tasks').appendChild(task(taskData[i].title));
+  }
+  setLogo();
+}
+
+function deleteTask() {
+  document.querySelectorAll('.task').forEach((task) => task.remove());
+}
+
+function createTask(title) {
+  return {
+    title: title,
+    date: Date.now(),
+    detail: '',
+  };
+}
+
+export default taskspage;

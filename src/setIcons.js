@@ -6,16 +6,23 @@ import home from './imge/home.png';
 import trash from './imge/trash.png';
 import done from './imge/done.png';
 
-setLogo('.sun', sun);
-setLogo('.close', close);
-setLogo('.star', star);
-setLogo('.show', show);
-setLogo('.home', home);
-setLogo('.trash', trash);
-setLogo('.done', done);
+function setLogo() {
+  const logoClass = [
+    '.sun',
+    '.close',
+    '.star',
+    '.show',
+    '.home',
+    '.trash',
+    '.done',
+  ];
+  const logoPath = [sun, close, star, show, home, trash, done];
 
-function setLogo(clas, path) {
-  document.querySelectorAll(clas).forEach((element) => {
-    element.setAttribute('src', path);
-  });
+  for (let i = 0; i < 8; i++) {
+    document.querySelectorAll(logoClass[i]).forEach((element) => {
+      element.setAttribute('src', logoPath[i]);
+    });
+  }
 }
+
+export default setLogo;
