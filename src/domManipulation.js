@@ -1,24 +1,31 @@
 const domManip = {
   openDetail: () => {
-    let showDetail = document.querySelector('#show-detail');
-    showDetail.addEventListener('click', () => {
-      document.querySelector('.main').style.display = 'none';
-      document.querySelector('.detail').style.display = 'flex';
+    let showDetail = document.querySelectorAll('.show-detail');
+    showDetail.forEach((element) => {
+      element.addEventListener('click', () => {
+        document.querySelector('.main').style.display = 'none';
+        document.querySelector('.detail').style.display = 'flex';
+      });
     });
   },
   closeDetail: () => {
-    let closeBtn = document.querySelector('#close');
-    closeBtn.addEventListener('click', () => {
-      document.querySelector('.detail').style.display = 'none';
-      document.querySelector('.main').style.display = 'grid';
+    let closeBtn = document.querySelectorAll('.close-detail');
+
+    closeBtn.forEach((element) => {
+      element.addEventListener('click', () => {
+        document.querySelector('.detail').style.display = 'none';
+        document.querySelector('.main').style.display = 'grid';
+      });
     });
   },
 
   deletFromDom: () => {
-    let btn = document.querySelector('#detail-delete-btn');
-    btn.addEventListener('click', () => {
-      document.querySelector('.detail').style.display = 'none';
-      document.querySelector('.main').style.display = 'grid';
+    let btn = document.querySelectorAll('.detail-delete-btn');
+    btn.forEach((element) => {
+      element.addEventListener('click', () => {
+        document.querySelector('.detail').style.display = 'none';
+        document.querySelector('.main').style.display = 'grid';
+      });
     });
   },
 };

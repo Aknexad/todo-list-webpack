@@ -11,6 +11,9 @@ function taskspage() {
     input.value = '';
     deleteTask();
     renderTasks();
+    domManip.openDetail();
+    domManip.closeDetail();
+    domManip.deletFromDom();
   });
 }
 
