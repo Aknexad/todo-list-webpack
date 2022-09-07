@@ -105,20 +105,23 @@ li:hover {
 }
 
 .delete-list,
-.task button {
+.task button,
+.show-all-tasks {
   background-color: var(--bg-color-One);
   border: none;
 }
 
 .delete-list img,
-.task img {
+.task img,
+.show-all-tasks img {
   filter: invert();
   width: 35px;
   height: 35px;
 }
 
 .delete-list:hover,
-.task button:hover {
+.task button:hover,
+.show-all-tasks:hover {
   border: 1px solid white;
   border-radius: 10px;
 }
