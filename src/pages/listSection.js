@@ -18,7 +18,7 @@ function renderLists() {
 function addNewList() {
   document.querySelector('#add-new-list-btn').addEventListener('click', () => {
     let input = document.querySelector('#input-list');
-    listData.push(createList(input.value, []));
+    listData.push(createList(input.value));
     input.value = '';
     deleteList();
     renderLists();
@@ -32,10 +32,10 @@ function deleteList() {
   document.querySelectorAll('.list').forEach((list) => list.remove());
 }
 
-function createList(title, tasks) {
+function createList(title) {
   return {
     title: title,
-    tasks: tasks,
+    tasks: [],
   };
 }
 
