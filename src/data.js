@@ -1,8 +1,8 @@
 const taskData = [
   {
     title: 'testing task',
-    date: Date.UTC(),
-    detail: 'testin note for task',
+    date: Date.now(),
+    detail: 'this is a dome text for testing',
   },
 ];
 

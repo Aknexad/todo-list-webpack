@@ -2,6 +2,7 @@ import task from '../component/task';
 import { taskData } from '../data';
 import setLogo from '../setIcons';
 import domManip from '../domManipulation';
+import detailPage from './detailPage';
 
 function taskspage() {
   renderTasks();
@@ -11,9 +12,6 @@ function taskspage() {
     input.value = '';
     deleteTask();
     renderTasks();
-    domManip.openDetail();
-    domManip.closeDetail();
-    domManip.deletFromDom();
   });
 }
 
@@ -22,6 +20,7 @@ function renderTasks() {
     document.querySelector('#tasks').appendChild(task(taskData[i].title));
   }
   setLogo();
+  detailPage();
 }
 
 function deleteTask() {
