@@ -1,5 +1,3 @@
-import domManip from '../domManipulation';
-
 function task(title = 'testing') {
   const task = document.createElement('div');
   const h2 = document.createElement('h2');

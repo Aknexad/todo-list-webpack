@@ -6,6 +6,11 @@ const taskData = [
   },
 ];
 
-const listData = [];
+const listData = [
+  {
+    title: 'testing list',
+    tasks: [taskData[0]],
+  },
+];
 
 export { taskData, listData };

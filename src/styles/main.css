@@ -81,6 +81,8 @@ li:hover {
 }
 
 /* lists */
+
+.lists-section,
 .lists {
   display: flex;
   flex-direction: column;
@@ -88,6 +90,10 @@ li:hover {
   align-items: center;
   width: 97%;
   height: 90%;
+}
+.lists {
+  height: 277px;
+  overflow: hidden;
 }
 
 .list {
@@ -212,6 +218,10 @@ li:hover {
   width: inherit;
   border-radius: 10px;
   padding: 0px 10px;
+}
+
+.task div {
+  padding-right: 20px;
 }
 
 .task:hover {

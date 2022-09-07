@@ -4,7 +4,8 @@ import list from './component/list';
 import { taskData } from './data';
 import domManip from './domManipulation';
 import setLogo from './setIcons';
+import listSection from './pages/listSection';
 
+listSection();
 taskspage();
-document.querySelector('.lists').appendChild(list());
 setLogo();
