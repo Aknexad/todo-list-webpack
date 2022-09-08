@@ -28,6 +28,13 @@ const domManip = {
       });
     });
   },
+  updateDate: () => {
+    const today = new Date();
+    const dd = today.getDay();
+    const mm = today.getMonth() + 1;
+    const yyyy = today.getFullYear();
+    document.querySelector('#today-date').innerText = `${dd}/${mm}/${yyyy}`;
+  },
 };
 
 export default domManip;
