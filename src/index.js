@@ -8,4 +8,4 @@ listSection();
 taskspage();
 setLogo();
 
-domManip.updateDate();
+domManip.toDay();

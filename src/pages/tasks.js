@@ -10,7 +10,7 @@ function taskspage() {
     let input = document.querySelector('#input-task');
     taskData.push(createTask(input.value));
     input.value = '';
-    deleteTask();
+    restartTasks();
     renderTasks();
   });
 }
@@ -23,16 +23,25 @@ function renderTasks() {
   detailPage();
 }
 
-function deleteTask() {
+function restartTasks() {
   document.querySelectorAll('.task').forEach((task) => task.remove());
 }
 
 function createTask(title) {
   return {
     title: title,
-    date: Date.now(),
+    date: dateOfCreated(),
     detail: '',
   };
+}
+
+function dateOfCreated() {
+  const today = new Date();
+  const dd = today.getDay();
+  const mm = today.getMonth() + 1;
+  const yy = today.getFullYear();
+  const d = `${dd},${mm},${yy}`;
+  return d;
 }
 
 export default taskspage;

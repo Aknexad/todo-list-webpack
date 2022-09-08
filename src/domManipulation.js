@@ -28,7 +28,7 @@ const domManip = {
       });
     });
   },
-  updateDate: () => {
+  toDay: () => {
     const today = new Date();
     const dd = today.getDay();
     const mm = today.getMonth() + 1;
