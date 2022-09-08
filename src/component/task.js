@@ -1,4 +1,4 @@
-function task(title = 'testing') {
+function task(title = 'testing', id) {
   const task = document.createElement('div');
   const h2 = document.createElement('h2');
   const div = document.createElement('div');
@@ -15,6 +15,8 @@ function task(title = 'testing') {
   deleteImg.classList.add('trash');
   detailImg.classList.add('show');
   importantImg.classList.add('star');
+
+  deleteBtn.id = id;
 
   deleteBtn.appendChild(deleteImg);
   detailBtn.appendChild(detailImg);
