@@ -1,4 +1,6 @@
-function list(title = 'default list') {
+import { listData } from '../data';
+
+function list(title = 'default list', btnid) {
   const list = document.createElement('div');
   const h2 = document.createElement('h2');
   const deleteBtn = document.createElement('button');
@@ -14,6 +16,7 @@ function list(title = 'default list') {
   deleteImg.classList.add('trash');
   allTasksBtn.classList.add('show-all-tasks');
   allTasksimg.classList.add('show');
+  deleteBtn.id = btnid;
 
   deleteBtn.appendChild(deleteImg);
   allTasksBtn.appendChild(allTasksimg);
